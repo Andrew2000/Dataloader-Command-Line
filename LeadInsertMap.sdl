@@ -1,0 +1,10 @@
+#Mapping values
+#Wed Nov 11 12:27:58 EST 2015
+Title=Country
+Lead\ Owner=OwnerId
+First\ Name=FirstName
+Lead\ ID=Status
+Last\ Name=LastName
+Street=Primary_Industry__c
+Lead\ Source=LeadSource
+Company\ /\ Account=Company

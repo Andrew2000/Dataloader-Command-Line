@@ -1,0 +1,22 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="leadInsert" class="com.salesforce.dataloader.process.ProcessRunner" singleton="false">
+        <description>leadInsert job gets the account record from the CSV file 
+            and inserts it into Salesforce.</description>
+        <property name="name" value="leadInsert" />
+        <property name="configOverrideMap">
+            <map>
+                <entry key="sfdc.debugMessages" value="true" />
+                <entry key="sfdc.loadBatchSize" value="200" />
+                <entry key="sfdc.entity" value="Lead" />
+                <entry key="process.operation" value="insert" />
+                <entry key="process.mappingFile" value="C:\Users\Andrew Lee\Documents\Dataloader CLI\leadInsertMap.sdl" />
+                <entry key="dataAccess.name" value="C:\Users\Andrew Lee\Documents\insertLeads.csv" />
+                <entry key="process.outputSuccess" value="C:\Users\Andrew Lee\Documents\Dataloader Exceptions\leadInsert_success.csv" />
+                <entry key="process.outputError" value="C:\Users\Andrew Lee\Documents\Dataloader Exceptions\leadInsert_error.csv" />
+                <entry key="dataAccess.type" value="csvRead" />
+                <entry key="process.initialLastRunDate" value="2015-11-01T00:00:00.000-0800" />
+            </map>
+        </property>
+    </bean>
+    </beans>
