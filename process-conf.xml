@@ -1,7 +1,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
     <bean id="leadInsert" class="com.salesforce.dataloader.process.ProcessRunner" singleton="false">
-        <description>leadInsert job gets the account record from the CSV file 
+        <description>leadInsert job gets the lead record from the CSV file 
             and inserts it into Salesforce.</description>
         <property name="name" value="leadInsert" />
         <property name="configOverrideMap">
